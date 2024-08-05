@@ -1,6 +1,6 @@
 
 fieldset{
-  border: n;
+  border: none;
 }
 body{
   background: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
