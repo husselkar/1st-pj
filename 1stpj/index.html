@@ -3,81 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="refresh" content="20">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <title>Survey Form</title>
     </head>
-    <body>
+<body>
         
     <div class="container">
-        <header class="header">
+        <header >
             <h1 id="title" class="title">My Survey Form</h1>
-        <p id="description" class="description">Kindly answer all the following questions.</p>
+            <p id="description" class="description">Kindly answer all the following questions.</p>
         </header>
-        <form id="survey-form" method="post">
-        <div class="form-group">
-           <label id="name-label" for="name">Name
-            <br><input id="name" type="text" placeholder="Enter your name" class="intp" required/></label><br><br>
-        </div>
-        <div class="form-group">
-           <label id="email-label" for="email">Email<br>
-            <input id="email" type="email" placeholder="Enter your email" class="intp" required/></label><br><br>
-        </div>
-        <div class="form-group">
-           <label id="number-label" for="number">Age (optional)<br>
-            <input id="number" type="number" placeholder="Age" min="13" max="120" class="intp" /></label><br><br>
-        </div>
-        <div class="form-group">
-        <label for="dropdown-label">Current Role<br>
-            <select id="dropdown" name="dropdown" class="intp">
-                <option value="0">current role</option>
+        <form id="survey-form" action="https://example.com/submit-form" method="post">
+
+        
+            <label id="name-label" for="name">Name
+            <br><input id="name" type="text" placeholder="Enter your name" required value="name"/></label>
+            <label id="email-label" for="email">Email
+            <input id="email" type="email" placeholder="Enter your email" value="email" required/></label>
+           
+            <label id="number-label" for="number">Age (optional)
+            <input id="number" type="number" placeholder="Age" min="13" max="120" value="age" required/></label>
+        
+            <label for="dropdown">Current Role</label>
+            <select id="dropdown" name="role" required>
+                <option value="" disabled selected>current role</option>
                 <option value="1">Student</option>
                 <option value="2">Teacher</option>
                 <option value="3">Job</option>
                 <option value="4">other...</option>
             </select>
-        </label>
-        </div><br>
-        <div class="form-group">
-            <legend>Bank Account Type</legend>
-            <input type="radio" class="intp" id="savings" name="account-type" value="savings" required>
-            <label for="savings">Savings Account</label>
-            <br>
             
-            <input class="intp" type="radio" id="checking" name="account-type" value="checking" required>
-            <label for="checking">Checking Account</label>
-            <br>
-            
-            <input  class="intp" type="radio" id="business" name="account-type" value="business" required>
-            <label for="business">Business Account</label>
-        </div><br>
-        <div class="form-group">
-            <legend>What is your yearly income?</legend>
-            <select class="intp" >
-                <option value="0"> select an option</option>
-                <option value="1">1-10k</option>
-                <option value="2">10k-20k</option>
-                <option value="3">20k+</option>
-            </select>
-        </div>
-        <div class="form-group">
-          <legend>What would you like to be improved?</legend>
-          <label><input  class="intp" type="checkbox" name="onilne-banking" id="online-banking" value="online-banking" class="inline" checked/> Online Banking</label>
-          <label><input  class="intp" type="checkbox" name="interface" id="interface" value="interface" class="inline"/> interface</label>
-          <label><input  class="intp" type="checkbox" name="app" id="app" value="app" class="inline"/> App</label>
-          <label><input  class="intp" type="checkbox" name="web-interface" id="web-interface" value="web-interface" class="inline"/> Web-interface</label>
-        </div>
-        <div class="form-group">
-            <label for="comment">Any comment: <br>
-            <textarea id="comment" class="int-classarea" name="comment" rows="3" cols="30" placeholder="Enter your comment here">
-            </textarea>
+         <br>
+            <fieldset>
+                <legend>what is your Bank Account Type:-</legend>
+                <label for="savings"><input type="radio" class="intp" id="savings" name="account-type" value="savings" required> Savings Account</label>
+                <label for="checking"><input class="intp" type="radio" id="checking" name="account-type" value="checking" required> Checking Account</label>
+                <label for="business"><input  class="intp" type="radio" id="business" name="account-type" value="business" required> Business Account</label>
+                <label for="ppf"><input  class="intp" type="radio" id="ppf" name="account-type" value="ppf" required> PPF Account</label>
+            </fieldset>
+
+         <br>
+          
+         <br>
+            <fieldset>
+       
+                <legend>What would you like to be improved?</legend>
+                <label><input class="intp" type="checkbox" name="onilne-banking" id="online-banking" value="online-banking"  checked/> Online Banking</label>
+                <label><input class="intp" type="checkbox" name="interface" id="interface" value="interface" /> interface</label>
+                <label><input class="intp" type="checkbox" name="app" id="app" value="app" /> App</label>
+                <label><input class="intp" type="checkbox" name="web-interface" id="web-interface" value="web-interface" /> Web-interface</label>
+            </fieldset>
+          <br>
+            <label for="comment">Any suggestion or comment here: 
+            <textarea id="comment" class="int-classarea" name="comment" rows="7" cols="30" placeholder="Enter your comment here" vale="area"></textarea>
             </label>
 
-        </div><br><br>
-        <div class="form group">
-            <button type="submit" id="submit " class="submit-button">Submit</button>
-        </div>
+         <br><br>
+        
+            <input type="Submit" id="submit" class="submit-button" value="Submit"/>
+        
     
         </form>
     </div>
-    </body>
+</body>
 </html>
